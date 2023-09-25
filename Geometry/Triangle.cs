@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace GeometryCalculator
+﻿namespace Geometry
 {
     public class Triangle : IFigure
     {
@@ -29,9 +23,10 @@ namespace GeometryCalculator
             return Math.Round(area, 2);
         }
 
-        public bool CheckRightTriangle() 
+        public static bool IsRightTriangle(double sideA, double sideB, double sideC) 
         {
             var sides = new[] { sideA, sideB, sideC }.OrderBy(side => side).ToList();
+
             return Math.Pow(sides[0], 2) + Math.Pow(sides[1], 2) == Math.Pow(sides[2], 2);
         }
     }

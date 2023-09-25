@@ -1,6 +1,6 @@
+using Geometry;
 
-
-namespace GeometryCalculator.Tests
+namespace Geometry.Tests
 {
     [TestClass]
     public class CircleTest
@@ -12,10 +12,10 @@ namespace GeometryCalculator.Tests
             double radius = 1;
             double expected = 3.14;
 
-            IFigure circle = new Circle(radius);
+            var circle = new Circle(radius);
 
             // Act
-            var area = circle.CalculateArea();
+            var area = GeometryCalc.CalculateArea(circle);
 
             // Assert
 
@@ -29,10 +29,10 @@ namespace GeometryCalculator.Tests
             double radius = 10;
             double expected = 314.16;
 
-            IFigure circle = new Circle(radius);
+            var circle = new Circle(radius);
 
             // Act
-            var area = circle.CalculateArea();
+            var area = GeometryCalc.CalculateArea(circle);
 
             // Assert
 

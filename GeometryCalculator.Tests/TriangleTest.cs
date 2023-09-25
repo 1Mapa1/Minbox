@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace GeometryCalculator.Tests
+﻿namespace Geometry.Tests
 {
     [TestClass]
     public class TriangleTest
@@ -18,10 +12,10 @@ namespace GeometryCalculator.Tests
             double sideC = 3;
             double expected = 6;
 
-            IFigure triangle = new Triangle(sideA, sideB, sideC);
+            var triangle = new Triangle(sideA, sideB, sideC);
 
             // Act
-            var area = triangle.CalculateArea();
+            var area = GeometryCalc.CalculateArea(triangle);
 
             // Assert
 
@@ -37,10 +31,8 @@ namespace GeometryCalculator.Tests
             double sideC = 3;
             bool expected = true;
 
-            Triangle triangle = new Triangle(sideA, sideB, sideC);
-
             // Act
-            var area = triangle.CheckRightTriangle();
+            var area = Triangle.IsRightTriangle(sideA, sideB, sideC);
 
             // Assert
 
@@ -56,10 +48,7 @@ namespace GeometryCalculator.Tests
             double sideC = 3;
             bool expected = false;
 
-            Triangle triangle = new Triangle(sideA, sideB, sideC);
-
-            // Act
-            var area = triangle.CheckRightTriangle();
+            var area = Triangle.IsRightTriangle(sideA, sideB, sideC);
 
             // Assert
 

@@ -1,4 +1,4 @@
-﻿namespace GeometryCalculator
+﻿namespace Geometry
 {
     public class Circle : IFigure
     {

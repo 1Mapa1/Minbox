@@ -1,6 +1,6 @@
 ﻿
 
-namespace GeometryCalculator
+namespace Geometry
 {
     public interface IFigure
     {
